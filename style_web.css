@@ -1,0 +1,266 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+.cf {
+  *zoom: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --el-color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+p {
+  color: var(--el-color);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+i {
+  color: #eb7620;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 300;
+}
+
+.m-t {
+  margin-top: 150px;
+}
+
+body {
+  margin: auto;
+}
+
+.m-b {
+  margin-bottom: 100px;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+/* Header */
+nav {
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  background-color: white;
+}
+
+nav h2 {
+  float: left;
+  display: inline-block;
+  line-height: 100px;
+  margin-right: 175px;
+}
+
+nav ul {
+  float: right;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+.active {
+  background-color: #eb7620;
+  padding: 7px 25px;
+  border-radius: 20px;
+  color: white;
+}
+
+.showcase {
+  height: calc(100vh - 100px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("office.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 10px solid #eb7620;
+}
+
+.showcase-content h1 {
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.showcase-content p {
+  color: #fff;
+  margin: 50px 0;
+}
+
+.showcase-content {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  transform: translateY(30vh);
+}
+
+.showcase-content .button {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 60px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.5s all;
+}
+
+.showcase-content .button:hover {
+  color: #fff;
+  background-color: #eb7620;
+  border: 0;
+}
+
+/*About*/
+.about .about-image {
+  width: 45%;
+  float: left;
+}
+
+.about-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about .about-content {
+  width: 45%;
+  float: right;
+  text-align: left;
+  margin-top: 60px;
+}
+
+.about .line {
+  width: 150px;
+  height: 6px;
+  background-color: black;
+  margin-top: 50px;
+}
+
+.about p {
+  margin-top: 10px;
+  width: 600px;
+  box-sizing: border-box;
+}
+
+.about ul {
+  margin-top: 50px;
+  list-style: none;
+}
+
+.about ul li {
+  margin: 10px 0;
+}
+
+.about .fa-li {
+  margin-left: -25px;
+}
+
+.social-icon {
+  margin-top: 50px;
+}
+
+.social-icon i {
+  padding: 10px;
+  font-size: 30px;
+  border: 1px solid black;
+}
+
+/*services*/
+.services {
+  width: 100%;
+  height: 700px;
+  position: absolute;
+  top: 1700px;
+  padding-left: 30px;
+  border: 1px solid black;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.kotak {
+  float: left;
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  text-align: center;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.kotak p {
+  margin-top: 20px;
+}
+
+/*video*/
+.video {
+  margin-left: 25%;
+  padding: 10px;
+  position: absolute;
+  top: 2500px;
+  border: 1px solid black;
+  width: 50%;
+}
+
+.video video{
+  margin-right: 30px;
+}
